@@ -49,6 +49,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
             .antMatchers(HttpMethod.GET, "/").permitAll()
             .antMatchers(HttpMethod.POST, "/api/workspace/new").permitAll()
             .anyRequest().authenticated()
+            .accessDecisionManager(AccessDecisionManager)
             .and()
             .csrf().csrfTokenRepository(csrfTokenRepository())
             .and()

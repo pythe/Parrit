@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
-@Profile("!test")
+@Profile("default")
 public class DefaultConfiguration {
 
     @Bean
