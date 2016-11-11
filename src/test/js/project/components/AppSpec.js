@@ -39,6 +39,9 @@ describe('App', function() {
             },
             pairingHistory: {
                 pairingHistoryList: [{data: 'blah'}]
+            },
+            flash: {
+                message: ''
             }
         },
         setNewPersonModalOpen: function(){},
@@ -71,6 +74,7 @@ describe('App', function() {
 
         expect(headerComponent.props.setPairingHistoryPanelOpen).toBe(props.setPairingHistoryPanelOpen, 'No setPairingHistoryPanelOpen passed to header');
         expect(headerComponent.props.isPairingHistoryPanelOpen).toBe(props.settings.isPairingHistoryPanelOpen, 'No isPairingHistoryPanelOpen passed to header');
+        expect(headerComponent.props.flash).toBe(props.data.flash);
     });
 
     it('has a Project component', function() {
